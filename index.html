@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+<head>
+	<title>LOL</title>
+	<meta charset="UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="description" content="IDK">
+	<meta name="viewport" content="width=device-width">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="main.js"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="style.css"/>
+	 <script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-78197765-1', 'auto');
+	  ga('send', 'pageview');
+	</script>
+</head>
+<body>
+	<div class="left">
+		<p>Jenna Rothstein</p>
+		<div class="nav">
+			<p id="recent">Recent stuff</p>
+			<p id="chode">Code stuff</p>
+			<p id="college">College stuff</p>
+			<p id="gif">gifs?</p>
+			<p id="resume">resume</p>
+			<p id="contact">contact</p>
+			<p id="insta">instagram</p>
+		</div>
+	</div>
+
+	<div class="panel" id="recent">
+		<img src="image/Rothstein_undies.jpg"/>
+	</div>
+	<div class="panel" id="chode"></div>
+	<div class="panel" id="college"></div>
+	<div class="panel" id="gif"></div>
+	<div class="panel" id="contact"></div>
+
+
+		<article class = "panel freak" style="display:none">
+			<section>
+				<div class="example">
+					<script type="application/processing">
+
+						float ax,ay;
+						int distance = 1;
+						int maxPoints = 7;
+						PVector[] vectors = new PVector[maxPoints];
+						int ctr = 0;
+						int tctr = 0;
+
+						float r_ = 0;
+						float g_ = 0;
+						float b_ = 0;
+
+						void woo(){
+						  float x = mouseX - random(distance);
+						  float y = mouseY - random(distance);
+
+
+						  for (int i = 0; i < min(tctr, maxPoints); i++) {
+
+						    strokeWeight(2);
+						    stroke(r_+20, g_+90, b_+180, 200);
+						    line(vectors[i].x, vectors[i].y, x, y);
+						  }
+						  vectors[ctr] = new PVector(x,y);
+						  ctr = (ctr + 1) % maxPoints;
+						  tctr += 1;
+						  ax = x + mouseX;
+						  ay = y - mouseY;
+						}
+
+						void setup() {
+						  size(600,600);
+						  smooth();
+						  ax = width/2;
+						  ay = height/2;
+						    fill(255,20);
+						  rect(0,0,width,height);
+						}
+
+						void draw() {
+
+						  fill(255,20);
+						  rect(0,0,width,height);
+						  woo();
+						  r_= r_+.25;
+						  g_= g_+.5;
+						  b_= b_+.15;
+
+						 if (r_ > 245) {
+						  r_ = 0;
+						 }
+						  if (g_ > 205) {
+						  g_ = 0;
+						 }
+						  if (b_ > 235) {
+						  b_ = 0;
+						 }
+						fill(r_+80, g_+20, b_+90,90);
+						noStroke();
+						ellipse(mouseX,mouseY,7,7);
+						if (mousePressed == true){
+							noStroke();
+							fill(255,50);
+							rect(0,0,width,height);}
+						 }
+					</script>
+				<canvas width="300" height="100%" tabindex="0" id="__processing0" style="image-rendering: -webkit-optimize-contrast !important;"></canvas>
+				<pre>
+	Java. 2015
+				</pre>
+			  <script src="processing.js"></script>
+			</div>
+		</section>
+	</article>
+
+		<pre id="face">
+			<a href="https://www.instagram.com/ihaveacooldog/">
+	¯\_(■_■)_/¯
+			</a>
+		</pre>
+</body>
+</html>
